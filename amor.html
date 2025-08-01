@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para Rocío Soledad - ¡Feliz Día de la Novia!</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Montserrat:wght@300;400;600&display=swap');
+        
+        :root {
+            --gold: #FFD700;
+            --rose: #FF6B6B;
+            --champagne: #F7E7CE;
+            --chocolate: #5D4037;
+            --sunflower: #F9A825;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background: linear-gradient(135deg, #FFF9F0 0%, #FFF0D9 100%);
+            margin: 0;
+            padding: 0;
+            color: var(--chocolate);
+            line-height: 1.8;
+            background-image: url('https://i.imgur.com/JtQ5y9Z.png');
+            background-attachment: fixed;
+            background-size: 30%;
+            background-position: right bottom;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 750px;
+            margin: 0 auto;
+            padding: 30px;
+            position: relative;
+            background-color: rgba(255, 253, 245, 0.92);
+            box-shadow: 0 0 30px rgba(0,0,0,0.05);
+            border: 1px solid rgba(255, 214, 161, 0.3);
+        }
+
+        .special-day-banner {
+            background: linear-gradient(to right, var(--rose), var(--sunflower));
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.5em;
+            letter-spacing: 1px;
+            border-radius: 8px;
+            margin-bottom: 25px;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+        }
+        
+        h1 {
+            color: var(--rose);
+            font-family: 'Dancing Script', cursive;
+            font-size: 3.8em;
+            margin: 20px 0 5px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            letter-spacing: 1px;
+            text-align: center;
+        }
+        
+        h2 {
+            color: var(--sunflower);
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.2em;
+            margin: 0 0 30px;
+            text-align: center;
+            font-weight: 400;
+        }
+        
+        .sunflower-field {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 40px 0;
+            gap: 10px;
+            perspective: 1000px;
+        }
+        
+        .sunflower {
+            font-size: 2.8em;
+            animation: sway 6s ease-in-out infinite;
+            transform-origin: bottom center;
+            cursor: pointer;
+            transition: all 0.4s;
+            text-shadow: 0 2px 3px rgba(0,0,0,0.1);
+        }
+        
+        .sunflower:hover {
+            transform: scale(1.3) rotate(15deg);
+            animation-play-state: paused;
+            filter: drop-shadow(0 0 5px rgba(249, 168, 37, 0.5));
+        }
+        
+        @keyframes sway {
+            0%, 100% { transform: rotate(-8deg); }
+            50% { transform: rotate(8deg); }
+        }
+        
+        .message-container {
+            position: relative;
+            margin: 50px 0;
+        }
+        
+        .message-paper {
+            background: linear-gradient(to bottom right, #FFFBF5, #FFF8EE);
+            border-radius: 3px 20px 20px 20px;
+            padding: 40px;
+            box-shadow: 5px 5px 15px rgba(0,0,0,0.08);
+            position: relative;
+            border: 1px solid rgba(255, 214, 161, 0.5);
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        .message-paper:hover {
+            transform: translateY(-5px);
+            box-shadow: 8px 8px 25px rgba(0,0,0,0.12);
+        }
+        
+        .message-paper::before {
+            content: "";
+            position: absolute;
+            top: -15px;
+            left: 30px;
+            width: 50px;
+            height: 50px;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%23FF6B6B"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>') no-repeat;
+            background-size: contain;
+            filter: drop-shadow(0 2px 3px rgba(0,0,0,0.1));
+        }
+        
+        .bible-verse {
+            font-style: italic;
+            color: var(--chocolate);
+            margin: 30px 0;
+            padding: 20px;
+            border-left: 4px solid var(--gold);
+            background-color: rgba(255, 241, 181, 0.2);
+            border-radius: 0 10px 10px 0;
+            position: relative;
+            font-size: 1.1em;
+        }
+        
+        .bible-verse::after {
+            content: """;
+            position: absolute;
+            bottom: -15px;
+            right: 20px;
+            font-size: 3em;
+            color: rgba(255, 214, 161, 0.5);
+        }
+        
+        .player-container {
+            margin: 50px auto;
+            width: 90%;
+            max-width: 500px;
+            background: linear-gradient(to right, #FFF5E6, #FFECCC);
+            border-radius: 15px;
+            padding: 5px 25px 25px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            border: 1px solid rgba(255, 214, 161, 0.5);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .player-container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(to right, var(--rose), var(--sunflower));
+        }
+        
+        .song {
+            display: flex;
+            align-items: center;
+            margin: 20px 0;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.7);
+            border-radius: 10px;
+            transition: all 0.4s;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+        }
+        
+        .song:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+        
+        .song-icon {
+            font-size: 2em;
+            margin-right: 20px;
+            color: var(--rose);
+            min-width: 40px;
+            text-align: center;
+        }
+        
+        .song-info {
+            flex: 1;
+        }
+        
+        .song-title {
+            font-weight: 600;
+            color: var(--chocolate);
+            margin-bottom: 5px;
+            font-size: 1.1em;
+        }
+        
+        .song-artist {
+            font-size: 0.9em;
+            color: var(--chocolate);
+            opacity: 0.8;
+        }
+        
+        .vocaroo-player {
+            width: 100%;
+            height: 80px;
+            border-radius: 10px;
+            margin-top: 15px;
+            border: 1px solid #eee;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        
+        .polaroid {
+            background: white;
+            padding: 15px 15px 70px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+            transform: rotate(2deg);
+            margin: 50px auto;
+            width: 80%;
+            max-width: 350px;
+            position: relative;
+            transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            cursor: pointer;
+            border: 1px solid #F5F5F5;
+        }
+        
+        .polaroid:hover {
+            transform: rotate(0deg) scale(1.05);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        
+        .polaroid:after {
+            content: "Nuestro Comienzo - 27/08/2023";
+            position: absolute;
+            bottom: 25px;
+            left: 0;
+            right: 0;
+            text-align: center;
+            font-family: 'Dancing Script', cursive;
+            color: var(--chocolate);
+            font-size: 1.5em;
+            letter-spacing: 1px;
+        }
+        
+        .our-photo {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border: 1px solid #eee;
+            box-shadow: inset 0 0 15px rgba(0,0,0,0.05);
+            filter: sepia(0.1) contrast(1.05) brightness(1.05);
+        }
+        
+        .timeline-container {
+            margin: 60px 0;
+        }
+
+        .timeline-container h3 {
+            color: var(--rose);
+            font-family: 'Dancing Script', cursive;
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .timeline-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            background: rgba(255, 255, 255, 0.6);
+            padding: 15px;
+            border-radius: 12px;
+            border-left: 5px solid var(--sunflower);
+            box-shadow: 3px 3px 15px rgba(0,0,0,0.05);
+        }
+        
+        .timeline-icon {
+            font-size: 1.8em;
+            color: var(--sunflower);
+            margin-right: 20px;
+        }
+        
+        .timeline-content p {
+            margin: 0;
+            font-weight: 600;
+        }
+
+        .timeline-content span {
+            font-size: 0.9em;
+            opacity: 0.8;
+        }
+
+        .date-marker {
+            font-family: 'Dancing Script', cursive;
+            color: var(--rose);
+            font-size: 1.8em;
+            margin: 40px 0;
+            text-align: center;
+            position: relative;
+        }
+        
+        .date-marker:before, .date-marker:after {
+            content: "";
+            display: inline-block;
+            width: 50px;
+            height: 2px;
+            background: linear-gradient(to right, transparent, var(--gold), transparent);
+            margin: 0 15px;
+            position: relative;
+            top: -5px;
+        }
+        
+        .footer {
+            margin-top: 70px;
+            font-size: 1em;
+            color: var(--chocolate);
+            padding: 30px 0;
+            border-top: 1px dashed rgba(255, 168, 0, 0.3);
+            text-align: center;
+            position: relative;
+        }
+        
+        .hearts {
+            color: var(--rose);
+            font-size: 2em;
+            animation: pulse 1.8s infinite;
+            display: inline-block;
+            filter: drop-shadow(0 0 5px rgba(255, 107, 107, 0.3));
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.3); }
+        }
+        
+        .surprise-btn {
+            background: linear-gradient(to right, var(--rose), #FF8E8E);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-family: 'Dancing Script', cursive;
+            font-size: 1.3em;
+            cursor: pointer;
+            margin: 30px auto;
+            transition: all 0.3s;
+            display: block;
+            box-shadow: 0 5px 15px rgba(255, 107, 107, 0.3);
+            letter-spacing: 1px;
+        }
+        
+        .surprise-btn:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 8px 20px rgba(255, 107, 107, 0.4);
+        }
+        
+        .floating-hearts {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+        }
+        
+        .heart {
+            position: absolute;
+            opacity: 0;
+            animation: float 10s linear infinite;
+            font-size: 1.5em;
+            color: rgba(255, 107, 107, 0.3);
+        }
+        
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) rotate(0deg);
+                opacity: 0;
+            }
+            10% {
+                opacity: 0.5;
+            }
+            90% {
+                opacity: 0.5;
+            }
+            100% {
+                transform: translateY(-100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        .gratitude-list {
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 40px 0;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+
+        .gratitude-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+            padding: 10px;
+            transition: all 0.3s;
+        }
+
+        .gratitude-item:hover {
+            transform: translateX(10px);
+            background: rgba(255, 241, 181, 0.3);
+        }
+
+        .gratitude-icon {
+            font-size: 1.5em;
+            margin-right: 15px;
+            color: var(--rose);
+            min-width: 30px;
+        }
+
+        .gratitude-text {
+            font-size: 1.1em;
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-hearts" id="floatingHearts"></div>
+    
+    <div class="container">
+        
+        <div class="special-day-banner">
+            ¡Feliz Día de la Novia, Mi Amor! (1 de Agosto)
+        </div>
+
+        <h1>Rocío Soledad</h1>
+        <h2>La mujer que ilumina mi vida con su amor</h2>
+        
+        <div class="sunflower-field">
+            <div class="sunflower" onclick="showSurprise('Eres el sol que ilumina todos mis días ☀️')" style="animation-delay: 0s;">🌻</div>
+            <div class="sunflower" onclick="showSurprise('Amo tu sonrisa, tu inteligencia y tu corazón noble ❤️')" style="animation-delay: 0.2s;">🌻</div>
+            <div class="sunflower" onclick="showSurprise('Contigo he aprendido lo que es el amor verdadero 🙏')" style="animation-delay: 0.4s;">🌻</div>
+            <div class="sunflower" onclick="showSurprise('Cada día a tu lado es un regalo que atesoro 💝')" style="animation-delay: 0.6s;">🌻</div>
+            <div class="sunflower" onclick="showSurprise('Sueño con nuestro futuro juntos, cada día, cada noche ✨')" style="animation-delay: 0.8s;">🌻</div>
+        </div>
+        
+        <div class="polaroid" onclick="showPhotoSurprise()">
+            <img src="https://i.ibb.co/vxY4p0QJ/20250508-111558.jpg" alt="Ever y Rocío Soledad" class="our-photo">
+        </div>
+
+        <div class="message-container">
+            <div class="message-paper">
+                <p style="font-size: 1.1em; line-height: 1.9;">Mi adorada Rocío Soledad,</p>
+                
+                <p>En este Día de la Novia, mi corazón rebosa de alegría y gratitud por tenerte en mi vida. Hoy celebro el milagro de nuestro amor, ese sentimiento puro y verdadero que nos une desde aquel 27 de agosto que cambió mi vida para siempre.</p>
+                
+                <p>Eres mi compañera, mi confidente, mi inspiración y la calma en mi caos. Cada día a tu lado es una página nueva en el libro más hermoso que he podido escribir. Tu amor me hace mejor persona, me da fuerzas para superar cualquier obstáculo y me llena de una felicidad que no conocía antes de ti.</p>
+                
+                <div class="bible-verse">
+                    "Porque me has robado el corazón, hermana mía, novia mía; me has robado el corazón con una mirada de tus ojos, con un collar de tu cuello."<br>
+                    - Cantares 4:9
+                </div>
+                
+                <p>En este día tan especial, quiero que sepas que eres el regalo más valioso que la vida me ha dado. Cada risa compartida, cada sueño conversado, cada momento a tu lado es un tesoro que guardo celosamente en lo más profundo de mi corazón.</p>
+
+                <div class="gratitude-list">
+                    <div class="gratitude-item">
+                        <div class="gratitude-icon">💖</div>
+                        <div class="gratitude-text">Gracias por tu amor incondicional que me sostiene cada día</div>
+                    </div>
+                    <div class="gratitude-item">
+                        <div class="gratitude-icon">✨</div>
+                        <div class="gratitude-text">Gracias por tu paciencia y comprensión cuando más lo necesito</div>
+                    </div>
+                    <div class="gratitude-item">
+                        <div class="gratitude-icon">🌻</div>
+                        <div class="gratitude-text">Gracias por alegrar mis días con tu energía y vitalidad</div>
+                    </div>
+                    <div class="gratitude-item">
+                        <div class="gratitude-icon">📚</div>
+                        <div class="gratitude-text">Gracias por compartir conmigo tu sabiduría y tus sueños</div>
+                    </div>
+                </div>
+                
+                <p>Para ti, con todo el amor que cabe en mi corazón, grabé esta canción. Es mi forma de decirte lo afortunado que me siento de tenerte en mi vida.</p>
+                
+                <div id="hiddenLove" style="display: none; margin-top: 30px; font-family: 'Dancing Script', cursive; font-size: 1.4em; color: var(--rose); text-align: center; animation: fadeIn 2s;">
+                    P.D.: Cada nota de esta melodía lleva una promesa: la de amarte y respetarte por siempre.
+                </div>
+                
+                <p style="text-align: right; margin-top: 40px; font-weight: 600;">
+                    Con todo el amor que cabe en este universo,<br>
+                    <span style="font-family: 'Dancing Script', cursive; font-size: 1.6em; color: var(--rose);">Tu Ever</span>
+                </p>
+            </div>
+        </div>
+        
+        <div class="player-container">
+            <h3 style="color: var(--chocolate); text-align: center; margin-bottom: 25px; font-size: 1.5em; position: relative;">
+                <span style="background: white; padding: 0 15px; position: relative; z-index: 1;">Una Canción desde mi Corazón</span>
+                <span style="position: absolute; top: 50%; left: 0; right: 0; height: 1px; background: linear-gradient(to right, transparent, rgba(255, 168, 0, 0.3), transparent); z-index: 0;"></span>
+            </h3>
+            
+            <div class="song">
+                <div class="song-icon">🎵</div>
+                <div class="song-info">
+                    <div class="song-title">Canción de Amor para Mi Novia</div>
+                    <div class="song-artist">De Ever para Rocío Soledad</div>
+                    
+                    <iframe class="vocaroo-player" src="https://voca.ro/1G4GNtYI9QFs/embed" frameborder="0" allow="autoplay"></iframe>
+                    
+                    <div style="text-align: center; margin-top: 15px;">
+                        <a href="https://voca.ro/1G4GNtYI9QFs" target="_blank" style="display: inline-block; background: var(--rose); color: white; padding: 10px 20px; border-radius: 30px; text-decoration: none; margin-top: 10px; transition: all 0.3s;">
+                           🎤 Escuchar en Vocaroo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-container">
+            <h3>Nuestro Camino de Amor</h3>
+            <div class="timeline-item">
+                <div class="timeline-icon">💖</div>
+                <div class="timeline-content">
+                    <p>Agosto 27, 2023</p>
+                    <span>El día que nuestras almas se encontraron y comenzó esta hermosa historia de amor.</span>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-icon">✨</div>
+                <div class="timeline-content">
+                    <p>Nuestros Momentos Especiales</p>
+                    <span>Risas compartidas, sueños conversados y la magia de construir un amor que crece cada día.</span>
+                </div>
+            </div>
+            <div class="timeline-item">
+                <div class="timeline-icon">🎉</div>
+                <div class="timeline-content">
+                    <p>Agosto 1, 2025 - Hoy</p>
+                    <span>Celebrando nuestro amor en este Día de la Novia, agradecido por cada instante a tu lado.</span>
+                </div>
+            </div>
+        </div>
+        
+        <button class="surprise-btn" onclick="showFinalSurprise()">Descubre Mi Promesa de Amor</button>
+        
+        <div class="date-marker">
+            Por Siempre y Para Siempre
+        </div>
+        
+        <div class="footer">
+            <p>Porque contigo, el tiempo se detiene y el amor es infinito <span class="hearts">❤️</span></p>
+            <p style="font-size: 0.9em; margin-top: 15px; font-style: italic; opacity: 0.8;">
+                "El amor es paciente, es bondadoso. El amor nunca deja de ser."<br>
+                - 1 Corintios 13:4,8
+            </p>
+             <p style="margin-top: 20px; font-family: 'Dancing Script', cursive; font-size: 1.2em; color: var(--rose);">
+                Hecho con todo mi amor para ti en este Día de la Novia.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        function createHearts() {
+            const container = document.getElementById('floatingHearts');
+            if (!container) return;
+            for (let i = 0; i < 20; i++) {
+                const heart = document.createElement('div');
+                heart.className = 'heart';
+                heart.innerHTML = '❤️';
+                heart.style.left = Math.random() * 100 + 'vw';
+                heart.style.animationDuration = (Math.random() * 10 + 10) + 's';
+                heart.style.animationDelay = Math.random() * 5 + 's';
+                container.appendChild(heart);
+            }
+        }
+        
+        setTimeout(function() {
+            const hiddenLove = document.getElementById('hiddenLove');
+            if(hiddenLove) {
+                hiddenLove.style.display = 'block';
+                hiddenLove.style.opacity = '1';
+            }
+        }, 10000);
+        
+        function showSurprise(message) {
+            alert(message);
+        }
+        
+        function showPhotoSurprise() {
+            alert("Esta foto captura la magia de nuestro comienzo. Cada día a tu lado es una página nueva en el libro más hermoso que he podido escribir. Eres mi más bello destino.");
+        }
+        
+        function showFinalSurprise() {
+            const existingSurprise = document.getElementById('secretMessageDiv');
+            if (existingSurprise) {
+                existingSurprise.scrollIntoView({ behavior: 'smooth' });
+                return;
+            }
+
+            const secretMessage = `
+                <div id="secretMessageDiv" style="background: rgba(255, 246, 229, 0.95); 
+                            padding: 30px; 
+                            border-radius: 10px; 
+                            margin: 40px 0; 
+                            border-left: 5px solid var(--rose);
+                            animation: fadeIn 1.5s;
+                            font-family: 'Dancing Script', cursive;
+                            font-size: 1.4em;
+                            text-align: center;
+                            box-shadow: 0 5px 20px rgba(0,0,0,0.1);">
+                    💌<br><br>
+                    <strong style="font-size: 1.3em;">Mi Promesa en Tu Día Especial</strong><br><br>
+                    Mi Rocío, mi amor eterno,<br><br>
+                    En este Día de la Novia, quiero renovar mi compromiso contigo.<br>
+                    Prometo amarte cada día con más intensidad,<br>
+                    cuidar de tu corazón como el tesoro más valioso,<br>
+                    y construir juntos un futuro lleno de sueños cumplidos.<br><br>
+                    Eres mi hoy y todos mis mañanas,<br>
+                    la razón de mi sonrisa y el motor de mis días.<br><br>
+                    <span style="color: var(--rose); font-size: 1.2em;">Gracias por elegirme cada día. Te amo infinitamente.</span>
+                </div>
+            `;
+            
+            const btn = document.querySelector('.surprise-btn');
+            btn.insertAdjacentHTML('afterend', secretMessage);
+            document.getElementById('secretMessageDiv').scrollIntoView({ behavior: 'smooth' });
+            btn.style.display = 'none';
+        }
+        
+        document.addEventListener('DOMContentLoaded', function() {
+            createHearts();
+        });
+    </script>
+</body>
+</html>
